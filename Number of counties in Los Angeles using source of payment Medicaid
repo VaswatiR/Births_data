@@ -1,0 +1,4 @@
+--Number of Counties in Los Angeles where Medicaid is used as the source of payment during the birth of a child
+SELECT COUNT(Source_of_Payment) as sourceofpayment FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_payment`
+WHERE Source_of_Payment='Medicaid'
+AND County_of_Residence LIKE '%LA%';
