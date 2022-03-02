@@ -1,0 +1,7 @@
+--Counties with births more than average where the source of payment is Private Insurance
+SELECT nat.County_of_Residence,pay.Source_of_Payment,nat.Births
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_payment` pay
+LEFT JOIN `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality` nat
+ON pay.County_of_Residence=nat.County_of_Residence
+       WHERE pay.Source_of_Payment='Private Insurance' 
+       AND nat.Births < (SELECT AVG(Births) FROM  `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality`);
