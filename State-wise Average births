@@ -1,0 +1,5 @@
+--State-wise average births
+SELECT SUBSTR(County_of_Residence,-2 , 2) as state,AVG(Births) AS AVG_BIRTHS
+from `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_mother_race`
+GROUP BY 1
+ORDER BY 2;
