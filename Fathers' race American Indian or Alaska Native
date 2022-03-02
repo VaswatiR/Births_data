@@ -1,0 +1,7 @@
+--The county of residence, births, average age of mother,average birth weight according to natality by father's race 
+--and the average pre-pregnancy BMI accroding to natality by mother's race when the father is an American Indian or Nativeof Alaska
+SELECT fat.County_of_Residence,fat.Births,fat.Ave_Age_of_Mother,fat.Ave_Birth_Weight_gms,mot.Ave_Pre_pregnancy_BMI
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_father_race` fat
+LEFT JOIN `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_maternal_morbidity` mot 
+ON fat.Births=mot.Births 
+WHERE  fat.Fathers_Single_Race='American Indian or Alaska Native';
