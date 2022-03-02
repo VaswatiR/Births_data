@@ -1,0 +1,5 @@
+--Average Pre-Pregnancy BMI and Average Age of Mother in counties in California
+SELECT County_of_Residence,Ave_Pre_Pregnancy_BMI,Ave_Age_of_Mother
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality`
+WHERE County_of_Residence LIKE UPPER ('%CA%')
+ORDER BY Ave_Age_of_Mother DESC ;
