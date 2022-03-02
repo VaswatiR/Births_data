@@ -1,0 +1,3 @@
+--The counties of residence where number of births less than the average number of births by abnormal conditions 
+SELECT County_of_Residence,Births FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_abnormal_conditions`
+WHERE Births < (SELECT AVG(Births) FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_abnormal_conditions`);
