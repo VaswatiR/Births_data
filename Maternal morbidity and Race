@@ -1,0 +1,7 @@
+--Average age of mother in the counties of race Blanck or African American and morbidity checked at least once
+SELECT mor.County_of_Residence,rac.Ave_Age_of_Mother
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_maternal_morbidity` mor  
+LEFT JOIN `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_mother_race` rac 
+ON mor.County_of_Residence=rac.County_of_Residence 
+WHERE mor.Maternal_Morbidity_Desc='At least one checked'
+AND rac.Mothers_Single_Race='Black or African American';
