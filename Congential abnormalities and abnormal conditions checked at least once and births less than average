@@ -1,0 +1,9 @@
+--Counties of Residence where abnormal conditions and congenital abnormalities have been checked at least once but the number of Births are less than average
+SELECT con.County_of_Residence, abn.Abnormal_Conditions_Checked_Desc, con.Congenital_Abnormality_Checked_Desc, con.Births
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_congenital_abnormalities` con
+INNER JOIN `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_abnormal_conditions` abn
+ON con.County_of_Residence=abn.County_of_Residence
+WHERE Congenital_Abnormality_Checked_Desc='At least one checked'
+AND  Abnormal_Conditions_Checked_Desc='At least one checked'
+AND con.Births < (SELECT AVG(Births) 
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_congenital_abnormalities`);
