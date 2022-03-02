@@ -1,0 +1,5 @@
+--The counties of residence with number of births is more than the average births and abnormal conditions have been checked at least once
+SELECT County_of_Residence, Abnormal_Conditions_Checked_Desc, Births
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_abnormal_conditions` 
+WHERE  Abnormal_Conditions_Checked_Desc='At least one checked' AND Births > (SELECT AVG(Births) 
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_abnormal_conditions`);
