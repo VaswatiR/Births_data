@@ -2,7 +2,7 @@
 Insights on natality data based on CDC-collected statistics for live births occurring within the United States to U.S. residents.
 The data set has been taken from the public datasets in BigQuery to draw insights.
 
-Abnormal conditions checked and births over average
+The counties of residence with number of births is more than the average births and abnormal conditions have been checked at least once
 ![Abnormal conditions checked and births over average](https://user-images.githubusercontent.com/100373319/156434855-b7c5013a-0c1e-46ab-8bb9-5d62f1b1d871.png)
 
 
@@ -12,13 +12,13 @@ Average Births
 
 
 
-California Avg pre-preg BMI and Avg Age of Mother
+Average Pre-Pregnancy BMI and Average Age of Mother in counties in California
 ![California Avg pre-preg BMI and Avg Age of Mother](https://user-images.githubusercontent.com/100373319/156435146-3801677a-2051-4606-88a0-77ab42e296e9.png)
 ![California Avg pre-preg BMI and Avg Age of Mother2](https://user-images.githubusercontent.com/100373319/156435172-0104c93e-fdd9-4499-9a75-a484785596f6.png)
 
 
 
-Congential abnormalities and abnormal conditions checked at least once and births less than average
+Counties of Residence where abnormal conditions and congenital abnormalities have been checked at least once but the number of Births are less than average
 ![Congential abnormalities and abnormal conditions checked at least once and births less than average](https://user-images.githubusercontent.com/100373319/156435240-af773af3-3227-4bde-8ceb-846dbf296880.png)
 
 
@@ -29,22 +29,22 @@ Counties with Births less than Average
 
 
 
-Fathers' race American Indian or Alaska Native
+The county of residence, births, average age of mother,average birth weight according to natality by father's race and the average pre-pregnancy BMI accroding to natality by mother's race when the father is an American Indian or Nativeof Alaska
 ![Fathers' race American Indian or Alaska Native](https://user-images.githubusercontent.com/100373319/156435628-675dc848-2757-48dc-bac2-3bcf096c9e71.png)
 
 
 
-Maternal morbidity and Race
+Average age of mother in the counties of race Blanck or African American and morbidity checked at least once
 ![Maternal morbidity and Race](https://user-images.githubusercontent.com/100373319/156435711-68919131-5d30-479a-ab3b-8bd78899f09e.png)
 
 
 
-Number of counties in Los Angeles using source of payment Medicaid
+Number of Counties in Los Angeles where Medicaid is used as the source of payment during the birth of a child
 ![Number of counties in Los Angeles using source of payment Medicaid](https://user-images.githubusercontent.com/100373319/156435799-56702cea-1b24-4142-b389-9c465d69e3a7.png)
 
 
 
-Payment by Private Insurance
+Counties with births more than average where the Private Insurance was used as the source of payment
 ![Payment by Private Insurance](https://user-images.githubusercontent.com/100373319/156435990-bbbe6e4d-7c73-4bad-a4aa-1b7afb7e769d.png)
 
 
